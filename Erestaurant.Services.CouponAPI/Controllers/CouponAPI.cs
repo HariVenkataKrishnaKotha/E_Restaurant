@@ -55,6 +55,23 @@ namespace Erestaurant.Services.CouponAPI.Controllers
             return _response;
         }
 
+        [HttpGet]
+        [Route("GetByCode/{code}")]
+        public ResponseDto Get(string code)
+        {
+            try
+            {
+                Coupon obj = _db.Coupons.First(x => x.CouponCode.ToLower() == code.ToLower());
+                _response.Result = _mapper.Map<CouponDto>(obj);
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
+            }
+            return _response;
+        }
+
         [HttpPost]
         public ResponseDto Post([FromBody] CouponDto couponDto)
         {
