@@ -9,7 +9,7 @@ using System;
 
 namespace Erestaurant.Services.CouponAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/CouponAPI")]
     [ApiController]
     public class CouponAPI : ControllerBase
     {
@@ -81,16 +81,16 @@ namespace Erestaurant.Services.CouponAPI.Controllers
 
 
                 //To let EF Core handle the Identity Column
-                using var transaction = _db.Database.BeginTransaction();
-                _db.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Coupons ON");
+                //using var transaction = _db.Database.BeginTransaction();
+                //_db.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Coupons ON");
 
                 _db.Coupons.Add(obj);
                 _db.SaveChanges();
 
                 // Disable IDENTITY_INSERT for Coupons table
-                _db.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Coupons OFF");
+                //_db.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Coupons OFF");
 
-                transaction.Commit();
+                //transaction.Commit();
 
                 _response.Result = _mapper.Map<CouponDto>(obj);
             }
@@ -122,7 +122,8 @@ namespace Erestaurant.Services.CouponAPI.Controllers
         }
 
         [HttpDelete]
-        public ResponseDto Delete([FromBody] int id)
+        [Route("{id:int}")]
+        public ResponseDto Delete(int id)
         {
             try
             {
