@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Erestaurant.Services.Coupon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Erestaurant.Web", "Erestaurant.Web\Erestaurant.Web.csproj", "{EAB8B052-0ABF-43F4-8827-C716D87915DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Erestaurant.Service.AuthAPI", "Erestaurant.Service.AuthAPI\Erestaurant.Service.AuthAPI.csproj", "{21715B50-F83A-4E15-8810-208C79952B8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{EAB8B052-0ABF-43F4-8827-C716D87915DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAB8B052-0ABF-43F4-8827-C716D87915DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAB8B052-0ABF-43F4-8827-C716D87915DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21715B50-F83A-4E15-8810-208C79952B8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21715B50-F83A-4E15-8810-208C79952B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21715B50-F83A-4E15-8810-208C79952B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21715B50-F83A-4E15-8810-208C79952B8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{23F82B05-0D88-4619-A71D-2DAA19A1B95A} = {AE84ADFC-08B9-4CA4-B668-EFC833726A4E}
 		{EAB8B052-0ABF-43F4-8827-C716D87915DE} = {CA7BE913-EE8E-4B10-9910-5F2666817312}
+		{21715B50-F83A-4E15-8810-208C79952B8C} = {AE84ADFC-08B9-4CA4-B668-EFC833726A4E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {26B184E0-DD1B-462F-B257-A715D6D9B6BC}
