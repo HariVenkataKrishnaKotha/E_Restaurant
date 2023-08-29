@@ -1,6 +1,8 @@
 ﻿using Erestaurant.Web.Models;
 using Erestaurant.Web.Service.IService;
+using Erestaurant.Web.Utility;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Erestaurant.Web.Controllers
 {
@@ -22,6 +24,14 @@ namespace Erestaurant.Web.Controllers
         [HttpGet]
         public IActionResult Register()
         {
+            var roleList = new List<SelectListItem>()
+            {
+                new SelectListItem{Text=StaticDetails.RoleAdmin,Value=StaticDetails.RoleAdmin},
+                new SelectListItem{Text=StaticDetails.RoleCustomer,Value=StaticDetails.RoleCustomer},
+            };
+
+            ViewBag.RoleList = roleList;
+
             return View();
         }
 
