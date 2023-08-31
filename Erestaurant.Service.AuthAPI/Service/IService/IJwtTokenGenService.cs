@@ -4,6 +4,6 @@ namespace Erestaurant.Service.AuthAPI.Service.IService
 {
     public interface IJwtTokenGenService
     {
-        string GenerateToken(ApplicationUser applicationUser);
+        string GenerateToken(ApplicationUser applicationUser, IEnumerable<string> roles);
     }
 }

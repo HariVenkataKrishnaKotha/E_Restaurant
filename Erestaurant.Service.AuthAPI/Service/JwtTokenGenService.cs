@@ -15,7 +15,7 @@ namespace Erestaurant.Service.AuthAPI.Service
         {
             _jwtOptions = jwtOptions.Value;
         }
-        public string GenerateToken(ApplicationUser applicationUser)
+        public string GenerateToken(ApplicationUser applicationUser, IEnumerable<string> roles)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
 
@@ -27,6 +27,8 @@ namespace Erestaurant.Service.AuthAPI.Service
                 new Claim(JwtRegisteredClaimNames.Sub,applicationUser.Id),
                 new Claim("name",applicationUser.Name)
             };
+
+            claims.AddRange(roles.Select(role=>new Claim(ClaimTypes.Role,role)));
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
@@ -40,5 +42,6 @@ namespace Erestaurant.Service.AuthAPI.Service
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
         }
+
     }
 }
