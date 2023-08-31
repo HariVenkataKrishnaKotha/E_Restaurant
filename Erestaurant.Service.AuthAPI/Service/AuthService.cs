@@ -46,7 +46,8 @@ namespace Erestaurant.Service.AuthAPI.Service
                 return new LoginResponseDto() { User = null, Token = "" }; ;
             }
             //Generate Jwt Token here
-            var token = _jwtTokenGenService.GenerateToken(user);
+            var roles = await _userManager.GetRolesAsync(user);
+            var token = _jwtTokenGenService.GenerateToken(user,roles);
 
             UserDto userDto = new()
             {
@@ -59,7 +60,7 @@ namespace Erestaurant.Service.AuthAPI.Service
             LoginResponseDto loginResponseDto = new LoginResponseDto()
             {
                 User = userDto,
-                Token = ""
+                Token = token
             };
 
             return loginResponseDto;
