@@ -2,11 +2,11 @@
 
 #Welcome to my .NET 8 microservices project repository! Below is a checklist of important tasks to complete for this project:
 
-- [ ] **Create a project structure**
-- [ ] **Create .NET 8 web API for the coupon service**
-- [ ] **Create a frontend .NET 8 web project to consume the Coupon API and test**
-- [ ] **Create .NET 8 web API for handling authentication and authorization**
-- [ ] **Add login/register/logout functionality to the web project and test**
+- [x] **Create a project structure**
+- [x] **Create .NET 8 web API for the coupon service**
+- [x]] **Create a frontend .NET 8 web project to consume the Coupon API and test**
+- [x] **Create .NET 8 web API for handling authentication and authorization**
+- [x] **Add login/register/logout functionality to the web project and test**
 - [ ] **Create .NET 8 web API for the functionality of products**
 - [ ] **Add a home page to the web project to get started with the online restaurant outlook**
 - [ ] **Create .NET 8 web API for the shopping cart functionality**
