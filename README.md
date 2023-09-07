@@ -4,7 +4,7 @@
 
 - [x] **Create a project structure**
 - [x] **Create .NET 8 web API for the coupon service**
-- [x]] **Create a frontend .NET 8 web project to consume the Coupon API and test**
+- [x] **Create a frontend .NET 8 web project to consume the Coupon API and test**
 - [x] **Create .NET 8 web API for handling authentication and authorization**
 - [x] **Add login/register/logout functionality to the web project and test**
 - [ ] **Create .NET 8 web API for the functionality of products**
